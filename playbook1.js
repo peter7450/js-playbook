@@ -54,3 +54,64 @@ function isEven(number){
 }
 console.log(isEven(4));
 console.log(isEven(9));
+
+// Exercise 7: Create a function getFirstChar that returns the first character of a string.
+function getFirstChar(name){
+    fullName = name[0];
+    return fullName;
+}
+console.log(getFirstChar("Spotify"));
+console.log(getFirstChar("Boomplay"));
+
+// Exercise 8: Create a function shout that converts text to uppercase and adds exclamation marks.
+
+function specialChar(name){
+    return name.toUpperCase() + "!!!";
+}
+console.log(specialChar("hello"));
+console.log(specialChar("morning"));
+
+// Exercise 9: Create a function double that takes a number and returns it doubled.
+
+function doubled(value){
+    return value + value;
+}
+console.log(doubled(5));
+console.log(doubled(3.5));
+
+/* explain this to me >>> Your task is to create a function that does four basic mathematical operations.
+The function should take three arguments - operation(string/char), value1(number), value2(number). The function should return result of numbers after applying the chosen operation.
+Examples(Operator, value1, value2) --> output
+
+```
+('+', 4, 7) --> 11
+('-', 15, 18) --> -3
+('*', 5, 5) --> 25
+('/', 49, 7) --> 7
+``` */
+
+function basciOp(operation, value1, value2){
+    switch(operation){
+        case "+":
+            return value1 + value2;
+        case "-":
+            return value1 - value2;
+        case "*":
+            return value1 * value2;
+        case "/":
+            return value1 + value2;
+        default:
+            return 0;
+    }
+}
+console.log(basicOp('+', 4, 7));
+console.log(basicOp('-', 15, 18));
+console.log(basicOp('*', 5, 5));
+console.log(basicOp('/', 49, 7));
+
+// Exercise 11: Reverse String Create a function reverseString that reverses a string.
+
+function reverseString(name){
+    return name.split("").reverse().join("");
+}
+console.log(reverseString("ayomide"));
