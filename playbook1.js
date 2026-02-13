@@ -90,7 +90,7 @@ Examples(Operator, value1, value2) --> output
 ('/', 49, 7) --> 7
 ``` */
 
-function basciOp(operation, value1, value2){
+function basicOp(operation, value1, value2){
     switch(operation){
         case "+":
             return value1 + value2;
@@ -144,3 +144,29 @@ function getLastItem(numbers){
 }
 console.log(getLastItem([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 console.log(getLastItem([1, 2, 3, 4, 5, 6]));
+
+/*
+
+Exercise 15: Count Array Items
+Create a function countItems that returns how many items are in an array.
+
+*/
+
+function countItems(items){
+    return items.length;
+}
+console.log(countItems([1,2,3,4]));
+
+
+/* Exercise 16:  You have a shopping cart. Add "shoes" and "shirt" 
+to the cart, then remove the last item added.
+Return the final cart. */
+
+const cart = ["hat", "pants"];
+
+const added = cart.push("shoes", "shirt");
+
+const updated = cart.pop();
+
+console.log(cart);
+

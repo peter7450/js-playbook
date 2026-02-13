@@ -1,19 +1,13 @@
+/* Given an array, keep removing the last item 
+until the array has only 2 items left.
+Return the final array. */
 
-
-// Exercise 14: Create a function findMax that returns the largest number in an array.
-
-/* function findMax(numbers){
-   if(numbers > numbers){
-    return Math.max(
-        numbers
-    )
-   }
+function removed(plates){
+    while(plates.length > 2){
+        plates.pop()
+    }
+    return plates;
 }
-console.log(findMax([1, 5, 3, 9, 2])); */
+console.log(removed(["p1", "p2", "p3", "p4", "p5"]));
 
-// Exercise 15: Reverse String Create a function reverseString that reverses a string.
 
-function reverseString(name){
-    return name.split("").reverse().join("");
-}
-console.log(reverseString("ayomide"));
