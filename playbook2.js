@@ -1,13 +1,7 @@
-/* Given an array, keep removing the last item 
-until the array has only 2 items left.
-Return the final array. */
+const tasks = ["Task 1", "Task 2", "Task 3"];
 
-function removed(plates){
-    while(plates.length > 2){
-        plates.pop()
-    }
-    return plates;
-}
-console.log(removed(["p1", "p2", "p3", "p4", "p5"]));
+tasks.unshift("URGENT TASK!!!");
+
+console.log(tasks);
 
 

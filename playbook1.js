@@ -170,3 +170,103 @@ const updated = cart.pop();
 
 console.log(cart);
 
+/* Exercise 17: Given an array, keep removing the last item 
+until the array has only 2 items left.
+Return the final array. */
+
+function removed(plates){
+    while(plates.length > 2){
+        plates.pop()
+    }
+    return plates;
+}
+console.log(removed(["p1", "p2", "p3", "p4", "p5"]));
+
+/* Exercise 18: Push these words one by one into an empty array:
+"I", "love", "coding"
+Then pop the last word and return both:
+- the popped word
+- the remaining array */
+
+const sentence = [];
+
+const firstWord = sentence.push("I");
+
+const  secondWord = sentence.push("love");
+
+const lastWord = sentence.push("coding");
+
+const removedString = sentence.pop()
+
+console.log(sentence);
+
+
+// Exercise 19: 
+
+const defaults = { lang: 'en', theme: 'dark'};
+
+const userPrefs = { lang: 'fr', currency: 'USD'};
+
+const adminPrefs = {...defaults, ...userPrefs};
+
+console.log(adminPrefs);
+
+const original = { a: 1, b: 2 };
+
+const copy = { ...original };
+
+console.log(copy);
+
+/* Exercise 20:
+Try to solve these without looking at the solutions immediately. Use modern array methods (map, filter, reduce, flatMap) where possible.
+
+Employee names
+Create an array containing only the names of all employees.
+*/
+
+const companyData = [
+  {
+    department: "Engineering",
+    manager: "Alice Smith",
+    employees: [
+      {
+        id: 101,
+        name: "Bob Jones",
+        role: "Backend Developer",
+        devices: [
+          { type: "Laptop", model: "MacBook Pro", year: 2022 },
+          { type: "Phone", model: "iPhone 13", year: 2021 }
+        ]
+      },
+      {
+        id: 102,
+        name: "Charlie Davis",
+        role: "Frontend Developer",
+        devices: [
+          { type: "Laptop", model: "Dell XPS", year: 2023 }
+        ]
+      }
+    ]
+  },
+  {
+    department: "Design",
+    manager: "Diana Prince",
+    employees: [
+      {
+        id: 103,
+        name: "Eve Adams",
+        role: "UX Designer",
+        devices: [
+          { type: "Laptop", model: "MacBook Pro", year: 2023 },
+          { type: "Tablet", model: "iPad Pro", year: 2022 }
+        ]
+      }
+    ]
+  }
+];
+
+const fullNames = companyData.flatMap(dept => {
+    return dept.employees.map(employee => employee.name)
+}
+);
+console.log(fullNames);
